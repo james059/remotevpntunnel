@@ -1,0 +1,5 @@
+router bgp 700
+neighbor 25.0.0.3 remote-as 100
+network 27.0.0.0 mask 255.0.0.0
+network 25.0.0.0 mask 255.0.0.0
+network 77.77.77.77 mask 255.255.255.255

@@ -1,0 +1,10 @@
+router bgp 300
+ network 7.0.0.0
+ network 28.0.0.0
+ network 150.0.0.0
+ network 160.0.0.0
+ neighbor 7.0.0.6 remote-as 600
+ neighbor 28.0.0.10 remote-as 800
+ neighbor 150.0.0.3 remote-as 100
+ neighbor 160.0.0.4 remote-as 200
+exit

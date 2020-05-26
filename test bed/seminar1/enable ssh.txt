@@ -1,0 +1,18 @@
+config t
+username sn277281 password cisco
+ip domain-name tucker.com
+crypto key generate rsa
+1024
+line vty 0 4
+transport input all
+login local
+password cisco
+exit
+
+line console 0
+logging synchronous
+login local
+
+enable secret welcome
+service password-encryption
+do sh ip ssh

@@ -1,0 +1,4 @@
+router bgp 600
+neighbor 7.0.0.5 remote-as 300
+network 7.0.0.0 mask 255.0.0.0
+network 16.0.0.0 mask 255.0.0.0

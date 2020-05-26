@@ -1,0 +1,118 @@
+Halifax 
+
+conf t
+int f0/0 
+ip address 14.0.0.1 255.0.0.0
+no sh
+int f0/1 
+ip address 5.0.0.1 255.0.0.0
+no sh
+-----------------------------------
+
+Yarmouth :
+
+conf t
+int f0/0 
+ip address 15.0.0.2 255.0.0.0
+no sh
+int f0/1 
+ip address 6.0.0.2 255.0.0.0
+no sh
+
+-----------------------------------
+ISP_AIR
+
+conf t
+int f0/0 
+ip address 5.0.0.3 255.0.0.0
+no sh
+int f0/1 
+ip address 25.0.0.3 255.0.0.0
+no sh
+int f2/0 
+ip address 192.168.0.1 255.0.0.0
+no sh
+int f1/0 
+ip address 150.0.0.3 255.255.0.0
+
+
+---------------------------------------
+ISP_BIRD
+
+conf t
+int f0/0 6.0.0.4 255.0.0.0
+no sh
+int f0/1 160.0.0.4 255.255.0.0
+no sh
+int f1/0 26.0.0.4 255.0.0.0
+no sh
+
+---------------------------------------
+ISP_SNOW
+conf t
+int f0/1 
+ip address 150.0.0.5 255.255.0.0
+no sh
+int f1/0 
+ip address 160.0.0.3 255.255.0.0
+no sh
+int f2/0 
+ip address 28.0.0.5 255.0.0.0
+no sh
+int f0/0 
+ip address 7.0.0.5 255.255.0.0
+no sh
+int f3/0 
+ip address 192.168.0.3 255.255.255.0
+no sh
+
+
+----------------------------------------
+
+ST_JOHN
+conf t
+int f0/0 
+ip address 7.0.0.6 255.0.0.0
+no sh
+int f0/1 
+ip address 16.0.0.6 255.0.0.0
+no sh
+
+--------------------------------
+
+IX_A
+conf t
+int e0/0 
+ip address 27.0.0.7 255.0.0.0
+no sh
+int f0/1 
+ip address 25.0.0.7 255.0.0.0
+no sh
+
+-----------------------------------
+IX_B
+
+conf t
+int f0/0 
+ip address 27.0.0.8 255.0.0.0
+no sh
+int f0/1 
+ip address 26.0.0.8 255.0.0.0
+no sh
+
+------------------------------------
+
+VPN_Gate1
+conf t
+int f0/0 
+ip address 27.0.0.9 255.0.0.0
+no sh
+--------------------------------------
+
+VPN_Gate2
+conf t
+int f0/0 
+ip address 28.0.0.10 255.0.0.0
+no sh
+
+----------------------------------------

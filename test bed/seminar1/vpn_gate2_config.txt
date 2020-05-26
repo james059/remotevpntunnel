@@ -1,0 +1,20 @@
+interface tunnel 111
+ip address 172.16.40.2 255.255.0.0
+bandwidth 1000
+delay 1000
+ip nhrp holdtime 360
+ip nhrp network-id 10000
+ip nhrp authentication cisco
+ip mtu 1400
+ip tcp adjust-mss 1360
+ip nhrp nhs 172.16.40.1
+ip nhrp map multicast 27.0.0.9
+ip nhrp map 172.16.40.1 27.0.0.9
+tunnel source f0/0
+tunnel mode gre multipoint
+tunnel key 10000
+!
+router eigrp 100
+network 172.16.40.2 0.0.0.0
+network 10.0.0.0 0.255.255.255
+no auto-summary
